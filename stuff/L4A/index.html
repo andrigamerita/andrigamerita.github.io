@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>L4A - Linux4Android</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="dist/style.css">
+	</head>
+	<body>
+		<script src="dist/darkmode-js.min.js"></script>
+		<script>new Darkmode().showWidget();</script>
+		<script src="dist/clipboard.min.js"></script>
+		
+		<div id="ptop">
+			<h2>L4A - Linux4Android</h2>
+			<h4>A collection of scripts and resources to install and use native full-fleged Linux on top of Android.</h4>
+		</div><br>
+		
+		<div>
+			<p><i><b>Protip:</b> Click on the button on the right-bottom of the screen to switch between <b>light and dark theme.</b></i></p>
+			<p><b>Note:</b> <b>Javascript</b> needs to be enabled on this page for clipboard-copying buttons and color theme switching.</p>
+		</div>
+		
+		<h2>____________________</h2>
+		
+		<div>
+			<h3>Table of contents</h3>
+			<ul>
+				<li><a href="#p-prereq">Prerequisites</a></li>
+				<li><a href="#p-distros">Distros</a></li>
+				<li><a href="#p-credits">Credits</a></li>
+			</ul>
+		</div>
+		
+		<br>
+		<form><input type="button" value="Go to bottom" onclick="window.location.href='#pbottom'" /></form>
+		
+		<h2>____________________</h2>
+
+		<div id="p-prereq">
+			<h3>Prerequisites</h3>
+			<p>First thing, to use this you need to have a Linux subsystem (like <b>Termux</b>) installed on your Android device, where you will paste the various commands.</p>
+			<form><input type="button" value="Info/download page" onclick="window.location.href='https://termux.com'" /></form>
+			<form><input type="button" value="APK v0.94 (direct download)" onclick="window.location.href='https://f-droid.org/repo/com.termux_94.apk'" /></form><br>
+			<p>If you also want to use a Desktop Environment or just a GUI of any sort, you need to connect to the VNC server (with address: localhost) started from the Linux environment. To achieve this, you need an app like <b>VNC Viewer</b>.</p>
+			<form><input type="button" value="Info/download page" onclick="window.location.href='https://www.realvnc.com/en/connect/download/viewer/android'" /></form>
+			<form><input type="button" value="APK v3.4.0 (direct download)" onclick="window.location.href='https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=478145'" /></form>
+		</div>
+
+		<h2>____________________</h2>
+		
+		<div id="p-distros">
+			<h3>Available Linux Distros</h3>
+			<ul>
+				<li><a href="#p-alpine">Alpine</a></li>
+				<li><a href="#p-arch">Arch</a></li>
+				<li><a href="#p-debian">Debian</a></li>
+				<li><a href="#p-fedora">Fedora</a></li>
+				<li><a href="#p-kali">Kali</a></li>
+				<li><a href="#p-manjaro">Manjaro</a></li>
+				<li><a href="#p-parrot">Parrot Security OS</a></li>
+				<li><a href="#p-ubuntu18">Ubuntu 18</a></li>
+				<li><a href="#p-ubuntu19">Ubuntu 19</a></li>
+			</ul>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-ubuntu18">
+			<h3>Ubuntu 18</h3>
+			<p>Install OS</p>
+			<input id="a1" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="a2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Ubuntu/UNI-ubuntu.sh && bash UNI-ubuntu.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="a3" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xfce4_de.sh && bash xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="a4" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/lxqt_de.sh && bash lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="a5" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/lxde_de.sh && bash lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a5">Copy</button><br>
+			<p>MATE</p>
+			<input id="a6" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/MATE/mate_de.sh && bash mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#a6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-ubuntu19">
+			<h3>Ubuntu 19</h3>
+			<p>Install OS</p>
+			<input id="b1" type="text" value="pkg update -y && pkg install proot wget tar pulseaudio  -y &&  wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Rootfs/Ubuntu19/ubuntu19.sh && chmod +x ubuntu19.sh && ./ubuntu19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="b2" type="text" value="pkg install wget -y && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Uninstall/Ubuntu19/UNI-ubuntu19.sh && chmod +x UNI-ubuntu19.sh && ./UNI-ubuntu19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="b3" type="text" value="sudo apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xfce19.sh && bash xfce19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="b4" type="text" value="sudo apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/lxqt19.sh && bash lxqt19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="b5" type="text" value="sudo apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/lxde19.sh && bash lxde19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b5">Copy</button><br>
+			<p>MATE</p>
+			<input id="b6" type="text" value="sudo apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/MATE/mate19.sh && bash mate19.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#b6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-kali">
+			<h3>Kali</h3>
+			<p>Install OS</p>
+			<input id="c1" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Kali/kali.sh && bash kali.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="c2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Kali/UNI-kali.sh && bash UNI-kali.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="c3" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xfce4_de.sh && bash xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="c4" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/lxqt_de.sh && bash lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="c5" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/lxde_de.sh && bash lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c5">Copy</button><br>
+			<p>MATE</p>
+			<input id="c6" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/MATE/mate_de.sh && bash mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#c6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-debian">
+			<h3>Debian</h3>
+			<p>Install OS</p>
+			<input id="d1" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Debian/debian.sh && bash debian.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="d2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Debian/UNI-debian.sh && bash UNI-debian.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="d3" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xfce4_de.sh && bash xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="d4" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/lxqt_de.sh && bash lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="d5" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/lxde_de.sh && bash lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d5">Copy</button><br>
+			<p>MATE</p>
+			<input id="d6" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/MATE/mate_de.sh && bash mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#d6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-arch">
+			<h3>Arch</h3>
+			<p>Install OS (32 bit)</p>
+			<input id="e1a" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/armhf/arch.sh && bash arch.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e1a">Copy</button><br>
+			<p>Install OS (64 bit)</p>
+			<input id="e1b" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Arch/amd64/arch.sh && bash arch.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e1b">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="e2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Arch/UNI-arch.sh && bash UNI-arch.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="e3" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/xfce4_de.sh && chmod +x xfce4_de.sh && ./xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="e4" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/lxqt_de.sh && chmod +x lxqt_de.sh && ./lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="e5" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/lxde_de.sh && chmod +x lxde_de.sh && ./lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e5">Copy</button><br>
+			<p>MATE</p>
+			<input id="e6" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/mate_de.sh && chmod +x mate_de.sh && ./mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#e6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-parrot">
+			<h3>Parrot Security OS</h3>
+			<p>Install OS</p>
+			<input id="f1" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Parrot/parrot.sh &&  bash parrot.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="f2" type="text" value=" wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Parrot/UNI-parrot.sh && bash UNI-parrot.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="f3" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/XFCE4/xfce4_de.sh && bash xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="f4" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXQT/lxqt_de.sh && bash lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="f5" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/LXDE/lxde_de.sh && bash lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f5">Copy</button><br>
+			<p>MATE</p>
+			<input id="f6" type="text" value="apt install wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/APT/MATE/mate_de.sh && bash mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#f6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-fedora">
+			<h3>Fedora</h3>
+			<p>Install OS</p>
+			<input id="g1" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Fedora/fedora.sh && bash fedora.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="g2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Fedora/UNI-fedora.sh && bash UNI-fedora.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="g3" type="text" value="yum install wget -y && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Fedora/XFCE4/xfce4_de.sh && bash xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="g4" type="text" value="yum install wget -y && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Fedora/LXQT/lxqt_de.sh && bash lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="g5" type="text" value="yum install wget -y && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Fedora/LXDE/lxde_de.sh && bash lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g5">Copy</button><br>
+			<p>MATE</p>
+			<input id="g6" type="text" value="yum install wget -y && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Fedora/MATE/mate_de.sh  && bash mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#g6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-manjaro">
+			<h3>Manjaro</h3>
+			<p>Install OS (64 bit)</p>
+			<input id="h1b" type="text" value="pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/Manjaro/manjaro.sh && bash manjaro.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h1b">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="h2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Manjaro/UNI-manjaro.sh && bash UNI-manjaro.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="h3" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/xfce4_de.sh && chmod +x xfce4_de.sh && ./xfce4_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h3">Copy</button><br>
+			<p>LXQT</p>
+			<input id="h4" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/lxqt_de.sh && chmod +x lxqt_de.sh && ./lxqt_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h4">Copy</button><br>
+			<p>LXDE</p>
+			<input id="h5" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/lxde_de.sh && chmod +x lxde_de.sh && ./lxde_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h5">Copy</button><br>
+			<p>MATE</p>
+			<input id="h6" type="text" value="pacman -S wget && wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Pacman/Manjaro/mate_de.sh && chmod +x mate_de.sh && ./mate_de.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#h6">Copy</button><br>
+		</div>
+		
+		<h2>____________________</h2>
+
+		<div id="p-alpine">
+			<h3>Alpine</h3>
+			<p>Install OS</p>
+			<input id="i1" type="text" value="pkg update -y && pkg install proot wget tar pulseaudio  -y &&  wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Alpine/alpine.sh && chmod +x alpine.sh && ./alpine.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#i1">Copy</button><br>
+			<p>Uninstall OS</p>
+			<input id="i2" type="text" value="wget https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Uninstall/Alpine/UNI-alpine.sh && bash UNI-alpine.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#i2">Copy</button><br>
+			<p>XFCE</p>
+			<input id="i3" type="text" value="apk add wget && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Alpine/alpine-xfce.sh && bash alpine-xfce.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#i3">Copy</button><br>
+			<p>MATE</p>
+			<input id="i6" type="text" value="apk add wget && wget https://raw.githubusercontent.com/AndronixApp/AndronixOrigin/master/Installer/Alpine/alpine-mate.sh && bash alpine-mate.sh">
+			<button class="btn" data-clipboard-action="copy" data-clipboard-target=	"#i6">Copy</button><br>
+		</div>
+
+		<h2>____________________</h2>
+
+		<div id="p-credits">
+			<h3>Credits</h3>
+			<ul>
+				<li><a href="https://clipboardjs.com">clipboard.js</a></li>
+				<li><a href="https://darkmodejs.learn.uno">darkmode.js</a></li>
+				<li><a href="https://github.com/AndronixApp">Andronix</a></li>
+			</ul>
+		</div>
+		<br><br id="pbottom">
+		
+		<div class="footer">
+			<form id="pbottom"><input type="button" value="Back to top" onclick="window.location.href='#ptop'" /></form>
+		</div>
+
+		<!-- 3. Instantiate clipboard -->
+		<script>
+			var clipboard = new ClipboardJS('.btn');
+		
+			clipboard.on('success', function(e) {
+				console.info('Action:', e.action);
+				console.info('Text:', e.text);
+				console.info('Trigger:', e.trigger);
+
+			e.clearSelection();
+});
+
+			clipboard.on('error', function(e) {
+				console.error('Action:', e.action);
+				console.error('Trigger:', e.trigger);
+});
+		</script>
+	</body>
+</html>

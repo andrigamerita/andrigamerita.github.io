@@ -1,0 +1,21 @@
+## Settings
+title: octo page
+owner: "octo"
+url: "https://andrigamerita.github.io"
+baseurl: "/"
+permalink: /:title/
+description: ""
+markdown: kramdown
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+## Global Variables
+email: "octoandri04@protonmail.com"
+github: "andrigamerita"
+# path to: css/, fonts/, img/ and js/
+assets_path: "/assets" # i.e. "/assets" 
+statement: "Designed by DeerRIDER, Forked by octo. Source: pRoJEct NeGYa (https://github.com/akiritsu/pRoJEct-NeGYa)"
+# default max toc levels: 1 - 6 (h1 - h6)
+toc_level: 3
+# texts randomly displayed in background
+bgtext: "αβγδεζηθικλμνξοπρστυφχψω∷∫∮∝∞∧∨∑∏∪∩∈∵∴⊥‖∠⌒⊙≌√"
